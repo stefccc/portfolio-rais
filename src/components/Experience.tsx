@@ -12,10 +12,27 @@ const Experience = () => {
       detail:
         "I maintained computer equipment and installed operating systems. I set up workstations and helped hospital staff with technical issues.",
     },
+    {
+      name: "Full-Stack Web Developer",
+      timePeriod: "June 2023 - July 2023 (1 month)",
+      detail:
+        "I worked in a team to develop a web application. I created the website using PHP, SCSS, and JavaScript. I integrated a MariaDB database using SQL. This was part of my foreign internship at SPŠEK Rakovník.",
+    },
   ];
   return (
     <div>
       <h1>Experience</h1>
+      <div>
+        <div className="positions">
+          {positions.map((position) => (
+            <div className="position">
+              <h3>{position.name}</h3>
+              <h4>{position.timePeriod}</h4>
+              <p>{position.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import About from "./About";
+import Experience from "./Experience";
 import TechStack from "./TechStack";
 
 const ScrollPage = () => {
@@ -6,6 +7,7 @@ const ScrollPage = () => {
     <div className="scrollPage">
       <About />
       <TechStack />
+      <Experience />
     </div>
   );
 };
