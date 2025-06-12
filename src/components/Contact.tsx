@@ -6,7 +6,10 @@ interface Props {
 const Contact = ({ logoLink, url }: Props) => {
   return (
     <>
-      <img src={logoLink} alt="logo" /> <a href={url}>{url}</a>
+      <a target="_blank" href={url}>
+        <img src={logoLink} alt="logo" />
+        <p>{url}</p>
+      </a>
     </>
   );
 };
