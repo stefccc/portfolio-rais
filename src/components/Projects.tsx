@@ -36,20 +36,21 @@ const Projects = () => {
   return (
     <div>
       <h2>Projects</h2>
-      <div className="projects">
+      <ul className="projects">
         {projects.map((project) => (
-          <a
-            target="_blank"
-            href={project.url}
-            className="project"
-            style={{ backgroundImage: `url(${project.imageUrl})` }}
-          >
-            <h3>{project.name}</h3>
-            <h4>{project.shortDesc}</h4>
-            <p>{project.longDesc}</p>
-          </a>
+          <li key={project.name} className="project">
+            <a
+              target="_blank"
+              href={project.url}
+              style={{ backgroundImage: `url(${project.imageUrl})` }}
+            >
+              <h3>{project.name}</h3>
+              <h4>{project.shortDesc}</h4>
+              <p>{project.longDesc}</p>
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
       <a target="_blank" href="https://github.com/stefccc">
         more on git
       </a>

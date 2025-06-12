@@ -11,13 +11,17 @@ function PersonalCard() {
         <h1>Štefan Rais</h1>
         <h2>Junior Software Developer</h2>
         <div className="location">
-          icon <p>Rakovník, Czech republic</p>
+          <img src="/location.svg" alt="waypoint" />
+          <p>Rakovník, Czech republic</p>
         </div>
       </div>
       <nav className="navigation">
         <ul>
           {navItems.map((item, index) => (
-            <li className={selectedIndex === index ? "selected" : ""}>
+            <li
+              key={item}
+              className={selectedIndex === index ? "selected" : ""}
+            >
               <Link
                 to={item}
                 smooth={true}

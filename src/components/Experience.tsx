@@ -23,15 +23,15 @@ const Experience = () => {
     <div>
       <h2>Experience</h2>
       <div>
-        <div className="positions">
+        <ul className="positions">
           {positions.map((position) => (
-            <div className="position">
+            <li key={position.name} className="position">
               <h3>{position.name}</h3>
               <h4>{position.timePeriod}</h4>
               <p>{position.detail}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );
