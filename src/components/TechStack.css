@@ -1,0 +1,29 @@
+.techStack {
+  background-color: var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40%;
+  background-color: transparent;
+  h2 {
+    color: white;
+    position: relative;
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  h2::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 120%;
+    background: white;
+    bottom: -45%;
+    left: -10%;
+    right: -10%;
+    margin: 0 auto;
+  }
+  .tech img {
+    margin: 0 8px;
+  }
+}
