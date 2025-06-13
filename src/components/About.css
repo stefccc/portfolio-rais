@@ -1,11 +1,11 @@
-.about {
+#About {
   background-color: var(--dark-gray);
   padding: 40px 60px;
   color: white;
   .red {
     color: var(--red);
   }
-  font-weight: 300;
   border-radius: 40px;
+  font-weight: 300;
   line-height: 1.5rem;
 }

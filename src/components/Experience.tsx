@@ -1,3 +1,5 @@
+import "./Experience.css";
+
 interface Position {
   name: string;
   timePeriod: string;
@@ -20,7 +22,7 @@ const Experience = () => {
     },
   ];
   return (
-    <div>
+    <div id="Experience">
       <h2>Experience</h2>
       <div>
         <ul className="positions">

@@ -1,0 +1,25 @@
+#Experience {
+  background-color: var(--dark-gray);
+  padding: 40px 60px;
+  color: white;
+  border-radius: 40px;
+  h2 {
+    background: linear-gradient(to right, #fff 0%, #999999 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  li {
+    h3 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    h4 {
+      color: var(--light-gray);
+      font-weight: 400;
+    }
+  }
+}

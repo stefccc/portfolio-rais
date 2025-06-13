@@ -1,10 +1,20 @@
 import "./PersonalCard.css";
 import { useState } from "react";
-import { Link } from "react-scroll";
 
 function PersonalCard() {
-  const navItems = ["Stack", "Experience", "Projects"];
+  const navItems = ["About", "Experience", "Projects"];
   const [selectedIndex, setSelectIndex] = useState(0);
+  const scrollPage = document.getElementById("scrollPage");
+
+  const scrollToId = (id: string) => {
+    const target = document.getElementById(id);
+
+    if (!target || !scrollPage) return;
+    scrollPage.scrollTo({
+      top: target.offsetTop - 20,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="personalCard">
       <div className="personalInfo">
@@ -21,18 +31,12 @@ function PersonalCard() {
             <li
               key={item}
               className={selectedIndex === index ? "selected" : ""}
+              onClick={() => {
+                setSelectIndex(index);
+                scrollToId(item);
+              }}
             >
-              <Link
-                to={item}
-                smooth={true}
-                duration={500}
-                offset={50}
-                onClick={() => {
-                  setSelectIndex(index);
-                }}
-              >
-                {item}
-              </Link>
+              {item}
             </li>
           ))}
         </ul>

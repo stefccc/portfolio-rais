@@ -2,10 +2,11 @@ import About from "./About";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import TechStack from "./TechStack";
+import "./ScrollPage.css";
 
 const ScrollPage = () => {
   return (
-    <div className="scrollPage">
+    <div id="scrollPage">
       <About />
       <TechStack />
       <Experience />

@@ -1,7 +1,7 @@
 import "./About.css";
 const About = () => {
   return (
-    <div className="about">
+    <div id="About">
       I'm a 19-year-old <span className="red">IT graduate</span> at
       <span className="red"> SPŠEK Rakovník</span> with a focus on software
       development since the age of 15. My
