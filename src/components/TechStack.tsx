@@ -14,7 +14,7 @@ const TechStack = () => {
       <h2>What I commonly use</h2>
       <div className="tech">
         {logosUrl.map((url) => (
-          <img src={url} alt="logo" />
+          <img key={url} src={url} alt="logo" />
         ))}
       </div>
     </div>

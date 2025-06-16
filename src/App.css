@@ -13,12 +13,17 @@
 }
 #root {
   height: 100vh;
-  padding: 20px;
-  background-color: black;
+  padding: 20px 40px;
+  background: #381516;
+  background: radial-gradient(
+    circle,
+    rgba(56, 21, 22, 1) 0%,
+    rgba(10, 9, 8, 1) 100%
+  );
   display: grid;
   grid-template: 4fr 1fr / 2fr 3fr;
-  * {
+  * > {
     max-width: 100%;
   }
-  gap: 40px;
+  gap: 15px 40px;
 }

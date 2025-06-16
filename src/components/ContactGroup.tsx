@@ -13,19 +13,22 @@ const ContactGroup = () => {
             </td>
             <td>
               <Contact
-                logoLink="/linkedin.svg"
-                url="linkedin.com/in/%C5%A1tefan-rais-ba6932369/"
+                logoLink="/linkedin.png"
+                url="https://linkedin.com/in/%C5%A1tefan-rais-ba6932369/"
               />
             </td>
           </tr>
           <tr>
             <td>
-              <Contact logoLink="/github.svg" url="github.com/stefccc" />
+              <Contact
+                logoLink="/github.png"
+                url="https://github.com/stefccc"
+              />
             </td>
             <td>
               <Contact
-                logoLink="/instagram.svg"
-                url="instagram.com/stefanrais/"
+                logoLink="/instagram.png"
+                url="https://instagram.com/stefanrais/"
               />
             </td>
           </tr>
