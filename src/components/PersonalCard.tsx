@@ -41,7 +41,9 @@ function PersonalCard() {
           ))}
         </ul>
       </nav>
-      <button className="downloadCV">Download CV</button>
+      <a href="/cv.txt" className="downloadCV" download="">
+        Download CV
+      </a>
     </div>
   );
 }

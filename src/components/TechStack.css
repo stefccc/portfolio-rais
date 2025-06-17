@@ -24,6 +24,7 @@
     margin: 0 auto;
   }
   .tech img {
-    margin: 0 8px;
+    padding: 0 8px;
+    transition: 0.3s;
   }
 }
