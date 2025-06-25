@@ -53,9 +53,11 @@ const Projects = () => {
           </li>
         ))}
       </ul>
-      <a target="_blank" href="https://github.com/stefccc">
-        more on git
-      </a>
+      <div className="git">
+        <a target="_blank" href="https://github.com/stefccc">
+          more on git
+        </a>
+      </div>
     </div>
   );
 };

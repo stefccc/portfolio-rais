@@ -26,5 +26,9 @@
   .tech img {
     padding: 0 8px;
     transition: 0.3s;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

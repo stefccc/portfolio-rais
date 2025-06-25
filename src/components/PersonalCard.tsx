@@ -11,7 +11,7 @@ function PersonalCard() {
 
     if (!target || !scrollPage) return;
     scrollPage.scrollTo({
-      top: target.offsetTop - 20,
+      top: target.offsetTop - 40,
       behavior: "smooth",
     });
   };
@@ -41,9 +41,9 @@ function PersonalCard() {
           ))}
         </ul>
       </nav>
-      <a href="/cv.txt" className="downloadCV" download="">
-        Download CV
-      </a>
+        <a href="/cv.docx" className="downloadCV" download="">
+          Download CV
+        </a>
     </div>
   );
 }
