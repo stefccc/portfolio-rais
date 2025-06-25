@@ -25,7 +25,7 @@ function PersonalCard() {
           <p>Rakovník, Czech republic</p>
         </div>
       </div>
-      <nav className="navigation">
+      <nav className="navigation pcOnly">
         <ul>
           {navItems.map((item, index) => (
             <li
@@ -41,9 +41,10 @@ function PersonalCard() {
           ))}
         </ul>
       </nav>
-        <a href="/cv.docx" className="downloadCV" download="">
-          Download CV
-        </a>
+      <a href="/cv.docx" className="downloadCV" download="">
+        Download CV
+      </a>
+      <button className="mobileOnly">Contacts</button>
     </div>
   );
 }

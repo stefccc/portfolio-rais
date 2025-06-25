@@ -3,7 +3,7 @@ import "./ContactGroup.css";
 
 const ContactGroup = () => {
   return (
-    <div className="contacts">
+    <div className="contacts pcOnly">
       <h2>Contacts</h2>
       <table>
         <tbody>

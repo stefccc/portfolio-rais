@@ -11,6 +11,12 @@
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
+.pcOnly {
+  display: block;
+}
+.mobileOnly {
+  display: none;
+}
 #root {
   height: 100vh;
   padding: 40px 80px 20px 80px;
@@ -29,10 +35,18 @@
 }
 @media only screen and (max-width: 1200px) {
   #root {
+    padding: 80px 30px 20px 30px;
+    height: auto;
     display: flex;
     flex-direction: column;
   }
   #scrollPage {
     overflow: visible;
+  }
+  .pcOnly {
+    display: none !important;
+  }
+  .mobileOnly {
+    display: block;
   }
 }

@@ -93,3 +93,42 @@
     transition: 0.3s;
   }
 }
+@media only screen and (max-width: 1200px) {
+  .personalCard {
+    padding: 60px 40px 25px 40px;
+    align-items: center;
+    text-align: center;
+    .personalInfo {
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+      }
+      .location {
+        display: flex;
+        flex-direction: column;
+        img {
+          height: 60px;
+        }
+        margin-bottom: 50px;
+      }
+    }
+    a.downloadCV {
+      width: 80%;
+      border: 3px solid white;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+    button {
+      background-color: transparent;
+      border: 3px solid var(--red);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+}
