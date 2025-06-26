@@ -1,4 +1,4 @@
-.techStack {
+#TechStack {
   background-color: var(--dark-gray);
   display: flex;
   flex-direction: column;
@@ -29,6 +29,30 @@
     transition: all 0.1s ease-in-out;
     &:hover {
       transform: scale(1.1);
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #TechStack {
+    margin-bottom: 30px;
+    gap: 40px;
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      &::after {
+        width: 100%;
+      }
+    }
+    .tech {
+      display: grid;
+      grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+      img {
+        padding: 20px;
+        height: 100px;
+      }
+      img:last-child {
+        grid-column: 2 / 3;
+      }
     }
   }
 }

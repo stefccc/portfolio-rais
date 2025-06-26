@@ -5,7 +5,8 @@ interface Project {
   shortDesc: string;
   longDesc: string;
   url: string;
-  imageUrl: string;
+  imageUrlPC: string;
+  imageUrlMobile: string;
 }
 
 const Projects = () => {
@@ -16,7 +17,8 @@ const Projects = () => {
       longDesc:
         "An android 2D game developed using Unity \n Released on Google Play",
       url: "https://play.google.com/store/apps/details?id=com.stefcstudio.supermelonboy&pcampaignid=web_share",
-      imageUrl: "/supermelonboy.png",
+      imageUrlPC: "/supermelonboybanner.png",
+      imageUrlMobile: "/supermelonboy.png",
     },
     {
       name: "Arctic Glimpse",
@@ -24,7 +26,8 @@ const Projects = () => {
       longDesc:
         "A portfolio website designed for a fictional Arctic nature photography group.\nHTML, CSS",
       url: "http://stefanrais.cz/projects/arctic/",
-      imageUrl: "/arcticglimpse.png",
+      imageUrlPC: "/arcticglimpsebanner.png",
+      imageUrlMobile: "/arcticglimpse.png",
     },
     {
       name: "Fill-in App",
@@ -32,7 +35,8 @@ const Projects = () => {
       longDesc:
         "A PHP app for creating fill-in-the-blank educational texts.\nConnected to a mariaDB database",
       url: "http://stefanrais.cz/projects/nemc/",
-      imageUrl: "/fillinapp.png",
+      imageUrlPC: "/fillinappbanner.png",
+      imageUrlMobile: "/fillinapp.png",
     },
   ];
   return (
@@ -43,8 +47,13 @@ const Projects = () => {
           <li
             key={project.name}
             className="project"
-            style={{ backgroundImage: `url(${project.imageUrl})` }}
+            style={{ backgroundImage: `url(${project.imageUrlPC})` }}
           >
+            <img
+              src={project.imageUrlMobile}
+              alt="image of project"
+              className="mobileOnly"
+            />
             <a target="_blank" href={project.url}>
               <h3>{project.name}</h3>
               <h4>{project.shortDesc}</h4>

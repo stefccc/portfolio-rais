@@ -9,8 +9,8 @@ const ScrollPage = () => {
     <div id="scrollPage">
       <About />
       <TechStack />
-      <Experience />
       <Projects />
+      <Experience />
     </div>
   );
 };

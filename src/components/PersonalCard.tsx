@@ -15,37 +15,52 @@ function PersonalCard() {
       behavior: "smooth",
     });
   };
+  const scrollToPortfolio = () => {
+    document.getElementById("TechStack")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
-    <div className="personalCard">
-      <div className="personalInfo">
-        <h1>Štefan Rais</h1>
-        <h2>Junior Software Developer</h2>
-        <div className="location">
-          <img src="/location.svg" alt="waypoint" />
-          <p>Rakovník, Czech republic</p>
+    <>
+      <div className="personalCard">
+        <div className="personalInfo">
+          <h1>Štefan Rais</h1>
+          <h2>Junior Software Developer</h2>
+          <div className="location">
+            <img src="/location.svg" alt="waypoint" />
+            <p>Rakovník, Czech republic</p>
+          </div>
         </div>
+        <nav className="navigation pcOnly">
+          <ul>
+            {navItems.map((item, index) => (
+              <li
+                key={item}
+                className={selectedIndex === index ? "selected" : ""}
+                onClick={() => {
+                  setSelectIndex(index);
+                  scrollToId(item);
+                }}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <a href="/cv.docx" className="downloadCV" download="">
+          Download CV
+        </a>
+        <button className="mobileOnly">Contacts</button>
       </div>
-      <nav className="navigation pcOnly">
-        <ul>
-          {navItems.map((item, index) => (
-            <li
-              key={item}
-              className={selectedIndex === index ? "selected" : ""}
-              onClick={() => {
-                setSelectIndex(index);
-                scrollToId(item);
-              }}
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <a href="/cv.docx" className="downloadCV" download="">
-        Download CV
-      </a>
-      <button className="mobileOnly">Contacts</button>
-    </div>
+      <button
+        id="scrollButton"
+        className="mobileOnly"
+        onClick={scrollToPortfolio}
+      >
+        <p>Portfolio</p>
+        <img src="/arrowsDown.svg" alt="arrows pointing down" />
+      </button>
+    </>
   );
 }
 

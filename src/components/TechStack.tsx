@@ -10,7 +10,7 @@ const TechStack = () => {
     "/sql.svg",
   ];
   return (
-    <div className="techStack">
+    <div className="techStack" id="TechStack">
       <h2>What I commonly use</h2>
       <div className="tech">
         {logosUrl.map((url) => (
