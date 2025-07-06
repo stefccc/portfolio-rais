@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Projects.css";
 
 interface Project {
@@ -39,22 +40,54 @@ const Projects = () => {
       imageUrlMobile: "/fillinapp.png",
     },
   ];
+  const [selectedIndex, setSelectIndex] = useState(0);
+  const goLeft = () => {
+    let setTo;
+    if (selectedIndex - 1 < 0) {
+      setTo = projects.length - 1;
+    } else {
+      setTo = selectedIndex - 1;
+    }
+    setSelectIndex(setTo);
+  };
+  const goRight = () => {
+    let setTo;
+    if (selectedIndex + 1 >= projects.length) {
+      setTo = 0;
+    } else {
+      setTo = selectedIndex + 1;
+    }
+    setSelectIndex(setTo);
+  };
   return (
     <div id="Projects">
       <h2>Projects</h2>
+      <img
+        src="/arrow.svg"
+        alt="arrow"
+        className="leftArrow"
+        onClick={goLeft}
+      />
+      <img
+        src="/arrow.svg"
+        alt="arrow"
+        className="rightArrow"
+        onClick={goRight}
+      />
       <ul className="projects">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <li
             key={project.name}
-            className="project"
+            className={index == selectedIndex ? "visible project" : "project"}
             style={{ backgroundImage: `url(${project.imageUrlPC})` }}
           >
-            <img
-              src={project.imageUrlMobile}
-              alt="image of project"
-              className="mobileOnly"
-            />
             <a target="_blank" href={project.url}>
+              <img
+                src={project.imageUrlMobile}
+                alt="image of project"
+                className="mobileOnly"
+              />
+              <div className="line"></div>
               <h3>{project.name}</h3>
               <h4>{project.shortDesc}</h4>
               <p>{project.longDesc}</p>
