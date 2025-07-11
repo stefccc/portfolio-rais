@@ -1,3 +1,4 @@
+import ContactGroup from "./ContactGroup";
 import "./PersonalCard.css";
 import { useState } from "react";
 
@@ -20,9 +21,20 @@ function PersonalCard() {
       behavior: "smooth",
     });
   };
+  const [contactsVisible, setContactsVisible] = useState(false);
+  const showContacts = () => {
+    setContactsVisible(!contactsVisible);
+  };
   return (
     <>
       <div className="personalCard">
+        <div
+          className={
+            contactsVisible ? "visible mobileOnly" : "hidden mobileOnly"
+          }
+        >
+          <ContactGroup />
+        </div>
         <div className="personalInfo">
           <h1>Štefan Rais</h1>
           <h2>Junior Software Developer</h2>
@@ -50,7 +62,9 @@ function PersonalCard() {
         <a href="/cv.docx" className="downloadCV" download="">
           Download CV
         </a>
-        <button className="mobileOnly">Contacts</button>
+        <button onClick={showContacts} className="mobileOnly">
+          Contacts
+        </button>
       </div>
       <button
         id="scrollButton"
