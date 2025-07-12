@@ -18,7 +18,6 @@ function PersonalCard() {
   const scrollToPortfolio = () => {
     const techStack = document.getElementById("TechStack");
     const techStackPos = techStack?.getBoundingClientRect().top ?? 0;
-    console.log(techStack);
     window.scrollTo({
       behavior: "smooth",
       top: techStackPos - 30,
