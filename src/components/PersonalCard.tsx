@@ -3,13 +3,12 @@ import "./PersonalCard.css";
 import { useState } from "react";
 
 function PersonalCard() {
-  const navItems = ["About", "Experience", "Projects"];
+  const navItems = ["About", "Projects", "Experience"];
   const [selectedIndex, setSelectIndex] = useState(0);
-  const scrollPage = document.getElementById("scrollPage");
-
   const scrollToId = (id: string) => {
     const target = document.getElementById(id);
 
+    const scrollPage = document.getElementById("scrollPage");
     if (!target || !scrollPage) return;
     scrollPage.scrollTo({
       top: target.offsetTop - 40,
@@ -17,8 +16,12 @@ function PersonalCard() {
     });
   };
   const scrollToPortfolio = () => {
-    document.getElementById("TechStack")?.scrollIntoView({
+    const techStack = document.getElementById("TechStack");
+    const techStackPos = techStack?.getBoundingClientRect().top ?? 0;
+    console.log(techStack);
+    window.scrollTo({
       behavior: "smooth",
+      top: techStackPos - 30,
     });
   };
   const [contactsVisible, setContactsVisible] = useState(false);
